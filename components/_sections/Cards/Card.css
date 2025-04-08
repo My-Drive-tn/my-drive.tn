@@ -1,6 +1,6 @@
 /* Card.css */
 .container {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem;
 }
@@ -17,104 +17,49 @@
 .card {
   position: relative;
   padding: 2rem;
-  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  border-radius: 1rem;
+  color: white;
+
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
-/* Left top card - dark with world map */
-.card:nth-child(1) {
-  background-color: #000;
-  color: rgb(237, 13, 13);
-  grid-area: one;
-  background-image: url('/path-to-world-map.png');
-  background-size: cover;
-  background-position: right;
-  background-blend-mode: soft-light;
-}
-
-.card:nth-child(1) .cardTitle {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.card:nth-child(1) .description {
+.card .cardTitle {
   font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--primary-text);
 }
 
-/* Right top card - gray with certification info */
+.card .description {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: var(--secondary-text);
+}
+
+/* ---- CARDS CSS ---- */
+.card:nth-child(1) {
+  grid-area: one;
+}
+
 .card:nth-child(2) {
-  background-color: #8cc82c;
-  color: black;
-  align-items: flex-start;
   grid-area: two;
 }
 
-.card:nth-child(2) .cardTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
-  line-height: 1.1;
-}
-
-.card:nth-child(2) .description {
-  margin-top: 1.5rem;
-}
-
-/* Left middle card - blue gradient with mantra */
 .card:nth-child(3) {
-  background: linear-gradient(135deg, #35c0de, #2a9fba);
-  color: white;
-  align-items: flex-start;
   grid-area: three;
 }
 
-.card:nth-child(3) .cardTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Bottom wide card - beige with "Best Crypto Exchanges" */
 .card:nth-child(4) {
-  background-color: #f5e9c0;
-  color: black;
-  align-items: flex-start;
   grid-area: four;
 }
 
-.card:nth-child(4) .cardTitle {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Right bottom card - orange gradient */
 .card:nth-child(5) {
-  background: linear-gradient(135deg, #f0a040, #e56b6f);
-  color: white;
-  align-items: flex-start;
   grid-area: five;
 }
 
-.card:nth-child(5) .cardTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Generic styling */
-.cardTitle {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.description {
-  margin: 0;
-  line-height: 1.5;
-}
 
 
 /* Responsive adjustments */
@@ -122,8 +67,4 @@
   .card-grid {
     grid-template-columns: 1fr;
   }
-
-  .card:nth-child(n) {}
-
-  .card:nth-child(5) {}
 }

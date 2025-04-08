@@ -4,6 +4,8 @@
 
   --primary-text: #111111;
   --secondary-text: #333333;
+
+  --max-width: 1300px;
 }
 
 @media (prefers-color-scheme: dark) {
