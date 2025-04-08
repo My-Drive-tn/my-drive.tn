@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import '@/app/navbar/navbar.css';
+import './navbar.css'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Navbar() {
           <h2>My-Drive</h2>
         </Link>
 
-       
+
 
         {/* Navigation links */}
         <div className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
@@ -36,8 +36,8 @@ export default function Navbar() {
             <button className="btn btn-signup">S'inscrire</button>
           </Link>
         </div>
-         {/* Burger Icon (visible mobile uniquement) */}
-         <button
+        {/* Burger Icon (visible mobile uniquement) */}
+        <button
           className="burger-icon"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
