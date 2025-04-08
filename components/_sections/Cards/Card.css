@@ -1,0 +1,129 @@
+/* Card.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "one two two"
+    "three two two"
+    "four four five";
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left top card - dark with world map */
+.card:nth-child(1) {
+  background-color: #000;
+  color: rgb(237, 13, 13);
+  grid-area: one;
+  background-image: url('/path-to-world-map.png');
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: soft-light;
+}
+
+.card:nth-child(1) .cardTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.card:nth-child(1) .description {
+  font-size: 1.5rem;
+}
+
+/* Right top card - gray with certification info */
+.card:nth-child(2) {
+  background-color: #8cc82c;
+  color: black;
+  align-items: flex-start;
+  grid-area: two;
+}
+
+.card:nth-child(2) .cardTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.card:nth-child(2) .description {
+  margin-top: 1.5rem;
+}
+
+/* Left middle card - blue gradient with mantra */
+.card:nth-child(3) {
+  background: linear-gradient(135deg, #35c0de, #2a9fba);
+  color: white;
+  align-items: flex-start;
+  grid-area: three;
+}
+
+.card:nth-child(3) .cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Bottom wide card - beige with "Best Crypto Exchanges" */
+.card:nth-child(4) {
+  background-color: #f5e9c0;
+  color: black;
+  align-items: flex-start;
+  grid-area: four;
+}
+
+.card:nth-child(4) .cardTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Right bottom card - orange gradient */
+.card:nth-child(5) {
+  background: linear-gradient(135deg, #f0a040, #e56b6f);
+  color: white;
+  align-items: flex-start;
+  grid-area: five;
+}
+
+.card:nth-child(5) .cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Generic styling */
+.cardTitle {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card:nth-child(n) {}
+
+  .card:nth-child(5) {}
+}

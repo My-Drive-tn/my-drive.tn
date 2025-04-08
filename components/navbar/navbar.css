@@ -29,7 +29,6 @@
 h2 {
   margin-left: 12px;
   color: #2dd4bf;
-  font-family: cursive;
 }
 
 .logo-text {
@@ -180,7 +179,7 @@ h2 {
     width: 50%;
     background-color: #1e2746;
     padding: 1rem 0;
-    margin-top:  200px;
+    margin-top: 200px;
   }
 
   .nav-links.show {
@@ -196,6 +195,6 @@ h2 {
 
   /* ✅ Masquer complètement les boutons sur mobile */
   .auth-buttons {
-    display: none ;
+    display: none;
   }
 }
