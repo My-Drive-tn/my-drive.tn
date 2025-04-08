@@ -8,3 +8,12 @@ export interface ISectionTitle {
   title: string;
   subtitle: string;
 }
+
+export interface IPricing {
+  title: string,
+  description: string,
+  price: number,
+  button: string,
+  popular?: boolean,
+  features: string[],
+}
