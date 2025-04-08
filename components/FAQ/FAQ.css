@@ -1,0 +1,86 @@
+/* Style général de la FAQ */
+.faq-wrapper {
+  margin: 40px 0;
+}
+
+.FAQ-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+.FAQ-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #0e7490;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* Container FAQ */
+.faq-container {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-container:hover {
+  border-color: #b0b0b0;
+}
+
+/* Bouton FAQ */
+.faq-button {
+  display: flex;
+  width: 100%;
+  padding: 16px 24px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Icône du bouton FAQ */
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Contenu FAQ */
+.faq-content {
+  padding: 0 24px 20px;
+  color: #4a4a4a;
+}
+
+.faq-content p {
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+/* Tag FAQ */
+.faq-tag-container {
+  margin-top: 12px;
+  display: flex;
+}
+
+.faq-tag {
+  background-color: #f0f0f0;
+  color: #4a4a4a;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+

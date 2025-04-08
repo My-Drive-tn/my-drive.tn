@@ -1,0 +1,62 @@
+.section-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .card-container {
+    max-width: 1200px;
+    width: 100%;
+    
+  }
+  
+  .card-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+  .card-bg picture,
+  .background-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card-content {
+    position: relative;
+    text-align: left;
+    padding: 2rem 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .title h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: aliceblue;
+  }
+  
+  .label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .label h3 {
+    font-size: 1.2rem;
+    color: brown;
+  }
+  
+  .arrow-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .arrow-button img {
+    width: 48px;
+    height: 48px;
+  }
+  

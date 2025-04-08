@@ -1,0 +1,201 @@
+/* Navbar styles */
+.navbar {
+  border-bottom: 1px solid var(--border-color);
+  background-color: #1e2746;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo section */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  margin-left: 12px;
+  color: #2dd4bf;
+  font-family: cursive;
+}
+
+.logo-text {
+  background-color: var(--primary-color);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.logo-section span:last-child {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Navigation links */
+.nav-links {
+  display: none;
+  margin-left: 80px;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Soulignement animé */
+.nav-links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #2dd4bf;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #2dd4bf;
+}
+
+/* Auth buttons */
+.auth-buttons {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.btn-login {
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.btn-login:hover {
+  color: #2dd4bf;
+}
+
+.btn-signup {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #14b8a6;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  transform: scale(1);
+  outline: none;
+}
+
+.btn-signup:hover {
+  background-color: #0f9c8e;
+  transform: scale(1.02);
+}
+
+.btn-signup:active {
+  transform: scale(0.98);
+}
+
+.btn-signup:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #14b8a6, 0 0 0 4px #1e293b;
+  border: 2px solid #14b8a6;
+}
+
+/* ----------------------------------------
+   ✅ Responsive menu mobile (corrigé)
+---------------------------------------- */
+
+.burger-icon {
+  display: block;
+  font-size: 1.75rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .burger-icon {
+    display: none;
+  }
+}
+
+/* ✅ Responsive display for links (ONLY) on mobile */
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    background-color: #1e2746;
+    padding: 1rem 0;
+    margin-top:  200px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  /* ✅ Masquer complètement les boutons sur mobile */
+  .auth-buttons {
+    display: none ;
+  }
+}

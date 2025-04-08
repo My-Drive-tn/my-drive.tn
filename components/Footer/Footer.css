@@ -1,0 +1,105 @@
+.footer {
+  background-color: #1e2746;
+  color: white;
+  padding: 3rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-container > div {
+  width: 30%;
+}
+
+h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 2;
+}
+
+ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-container strong, a {
+  color: #2dd4bf;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.newsletter input {
+  width: 100%; /* w-full */
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  border-radius: 0.75rem; /* rounded-lg */
+  background-color: #2d3748; /* bg-slate-800 */
+  border: 1px solid #4a5568; /* border-slate-700 */
+  color: white; /* Texte en blanc (si besoin) */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transition lors du focus */
+}
+
+.newsletter input:focus {
+  outline: none; /* focus:outline-none */
+  box-shadow: 0 0 0 2px #14b8a6;  /* focus:ring-2 focus:ring-teal-500 */
+  border-color: transparent; /* focus:border-transparent */
+}
+
+.newsletter button {
+  width: 100%; /* w-full */
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  background-color: #14b8a6; /* bg-teal-500 */
+  color: white; /* text-white */
+  font-weight: 500; /* font-medium */
+  border-radius: 0.75rem; /* rounded-lg */
+  transition: all 0.2s ease; /* transition-all duration-200 */
+  transform: scale(1); /* Transform initial scale */
+  outline: none; /* Remove default outline */
+  border: none; /* Remove default border */
+  margin-top: 10px;
+}
+
+.newsletter button:hover {
+  background-color: #0f9c8e; /* hover:bg-teal-600 */
+  transform: scale(1.02); /* Slight scale up on hover */
+}
+
+.newsletter button:active {
+  transform: scale(0.98); /* Slight scale down when clicked */
+}
+
+.newsletter button:focus {
+  outline: none; /* focus:outline-none */
+  box-shadow: 0 0 0 2px #14b8a6, 0 0 0 4px #1e293b; /* Simulate the focus ring using box-shadow */
+}
+
+.footer-bottom {
+  margin-top: 3rem; /* mt-12 */
+  padding-top: 2rem; /* pt-8 */
+  border-top: 1px solid #2d3748; /* Change la couleur gris à un vert clair (#14b8a6) */
+  text-align: center; /* text-center */
+  font-size: 0.875rem; /* text-sm */
+  color: #cbd5e0; /* text-slate-400 */
+  width: 80%; /* Réduit la largeur de la ligne */
+  margin-left: auto; /* Centre la ligne horizontalement */
+  margin-right: auto; /* Centre la ligne horizontalement */
+}
+
+/* Correction du décalage sous le titre "Contactez-nous" */
+.contact-info p {
+  margin: 8px 4;  /* Réduit les marges et assure un espacement uniforme entre les paragraphes */
+  line-height: 1.5;    /* Augmente l'interligne pour une meilleure lisibilité */
+  margin-right: 80px;
+  align-items: flex-start;
+}

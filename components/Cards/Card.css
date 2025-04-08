@@ -1,0 +1,111 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  .card-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-top: 3rem;
+    font-weight: bold;
+  }
+  
+  .card-subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0e7490;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  
+  /* 6 colonnes = contrôle précis */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    justify-items: stretch;
+  }
+  
+  /* Cartes 1-3 = 2 colonnes chacune */
+  .card-grid > .card:nth-child(1),
+  .card-grid > .card:nth-child(2),
+  .card-grid > .card:nth-child(3) {
+    grid-column: span 2;
+  }
+  
+  /* Cartes 4-5 = 3 colonnes chacune, collées */
+  .card-grid > .card:nth-child(4),
+  .card-grid > .card:nth-child(5) {
+    grid-column: span 3;
+  }
+  
+  /* Carte générale */
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: none;
+    height: 100%;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .icon-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.75rem 0;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .card {
+      grid-column: span 1 !important;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
