@@ -12,7 +12,7 @@ export interface ISectionTitle {
 export interface IPricing {
   title: string,
   description: string,
-  price: number,
+  price: number | string,
   button: string,
   popular?: boolean,
   features: string[],

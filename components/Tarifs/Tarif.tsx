@@ -8,7 +8,7 @@ const PRICING: IPricing[] = [
   {
     title: 'Basic',
     description: 'Idéal pour les petites équipes gérant plusieurs projets, avec des besoins de stockage et de transfert modérés.',
-    price: 0,
+    price: 'Gratuit',
     button: 'Commencer Gratuitement',
     features: [
       '2 To d’espace de stockage pour vos fichiers essentiels',
@@ -57,11 +57,20 @@ export default function Tarif() {
           >
             {plan.popular && <div className="popular-badge">Plus populaire</div>}
             <h3 className="plan-name">{plan.title}</h3>
-            <div className="price-container">
-              <span className="currency">€</span>
-              <span className="price">{plan.price}</span>
-              <span className="period">/month</span>
-            </div>
+            {
+              typeof plan.price === "number" &&
+              <div className="price-container">
+                <span className="currency">€</span>
+                <span className="price">{plan.price}</span>
+                <span className="period">/month</span>
+              </div>
+            }
+            {
+              typeof plan.price === "string" &&
+              <div className="price-container">
+                <span className="price">{plan.price}</span>
+              </div>
+            }
             <ul className="feature-list">
               {plan.features.map((feature, featureIndex) => (
                 <li key={featureIndex} className="feature-item">
