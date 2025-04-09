@@ -65,8 +65,8 @@ const FAQ = () => {
   };
 
   return (
-    <div className='spacer'>
-    <div className="faq-wrapper" id='FAQ' >
+    <section className="faq-wrapper" id='FAQ' >
+      <div className='spacer'>
       <h1 className="FAQ-heading">Questions Fréquemment Posées</h1>
       <h2 className="FAQ-subtitle">Tout ce que vous devez savoir sur My-Drive pour en tirer le meilleur parti</h2>
 
@@ -120,7 +120,7 @@ const FAQ = () => {
         </div>
       ))}
     </div>
-    </div>
+    </section>
   );
 };
 

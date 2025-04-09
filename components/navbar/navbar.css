@@ -26,9 +26,10 @@
   align-items: center;
 }
 
-h2 {
+#navbar h2 {
   margin-left: 12px;
   color: #2dd4bf;
+  font-family: cursive;
 }
 
 .logo-text {
