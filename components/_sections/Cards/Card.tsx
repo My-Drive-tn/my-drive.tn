@@ -34,18 +34,25 @@ const Card: React.FC = () => {
   ];
 
   return (
+   
     <section className="container" id="Fonctionnalités">
+      < div className="spacer"></div>
       <SectionTitle section='FONCTIONALITE' />
 
       <div className="card-grid">
         {features.map((panel, index) => (
           <div key={index} className="card">
+            <img src={panel.icon} alt={panel.title} className="card-icon" 
+              width={100}
+              height={100} />
             <h3 className="cardTitle">{panel.title}</h3>
             {panel.description && <p className="description">{panel.description}</p>}
           </div>
         ))}
       </div>
+      <div/>
     </section>
+    
   );
 };
 
