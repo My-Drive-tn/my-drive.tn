@@ -119,13 +119,12 @@
 }
 
 .pricing-card:nth-child(1) .cta-button {
-    background-color: #f5f5f5;
-    color: #333;
-    border: 1px solid #ddd;
+    background-color: #333;
+    color: white;
 }
 
 .pricing-card:nth-child(1) .cta-button:hover {
-    background-color: #eaeaea;
+    background-color: #222;
 }
 
 .pricing-card:nth-child(2) .cta-button {

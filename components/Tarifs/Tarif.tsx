@@ -46,7 +46,9 @@ const PRICING: IPricing[] = [
 
 export default function Tarif() {
   return (
-    <div id='Tarifs' className='container'>
+    
+    <section id='Tarifs' className='container'>
+      <div className="spacer">
       <SectionTitle section='TARIF' />
 
       <div className="pricing-grid">
@@ -85,6 +87,8 @@ export default function Tarif() {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </section>
+    
   );
 }
