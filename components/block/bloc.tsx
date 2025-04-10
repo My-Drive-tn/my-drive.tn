@@ -3,7 +3,8 @@ import "./bloc.css";
 
 const Bloc: React.FC = () => {
   return (
-    <section className="wrapper">
+    <section className="wrapper container">
+
       <div className="content">
         <div className="textBlock">
           <h2 className="title">
