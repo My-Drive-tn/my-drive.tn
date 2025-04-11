@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -34,20 +36,18 @@ const Footer = () => {
         <div className="footer-links">
           <h4>Pages</h4>
           <ul>
-            <li><a href="/about">À propos</a></li>
-            <li><a href="/features">Fonctionnalités</a></li>
-            <li><a href="/pricing">Tarifs</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="#HeroSection">À propos</a></li>
+            <li><a href="#Fonctionnalités">Fonctionnalités</a></li>
+            <li><a href="#Tarifs">Tarifs</a></li>
+            <li><a href="#FAQ">FAQ</a></li>
           </ul>
         </div>
-
         <div className="social-media">
           <h4>Suivez-nous</h4>
           <ul>
-            <li><a href="https://facebook.com/mydrive">Facebook</a></li>
-            <li><a href="https://twitter.com/mydrive">Twitter</a></li>
-            <li><a href="https://linkedin.com/mydrive">LinkedIn</a></li>
+            <li><a href="https://facebook.com/mydrive"><FontAwesomeIcon icon={faFacebook} /> Facebook</a></li>
+            <li><a href="https://twitter.com/mydrive"><FontAwesomeIcon icon={faTwitter} /> Twitter</a></li>
+            <li><a href="https://linkedin.com/mydrive"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a></li>
           </ul>
         </div>
 
@@ -72,7 +72,6 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© 2025 My-Drive. Tous droits réservés.</p>
       </div>
-      
     </footer>
   );
 };

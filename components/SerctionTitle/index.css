@@ -1,6 +1,9 @@
 .sectionHeading {
-  font-size: 3rem;
-  color: var(--primary-text);
+  font-size: 2.5rem;
+  color: #0f172a;
+  text-align: center;
+  margin-top: 3rem;
+  /*color: var(--primary-text);*/
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 2rem;
@@ -8,8 +11,11 @@
 
 .sectionSubtitle {
   font-size: 1.5rem;
-  color: var(--secondary-text);
+  text-align: center;
+  /*color: var(--secondary-text);*/
+  color: #0e7490;
   margin-bottom: 2rem;
   font-weight: 500;
   margin-bottom: 2rem;
+  font-weight: 500;
 }

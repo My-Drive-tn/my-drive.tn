@@ -16,7 +16,6 @@
   font-size: 1.5rem;
   color: #0e7490;
   margin-bottom: 2rem;
-  font-weight: 500;
 }
 
 /* Container FAQ */
@@ -84,3 +83,16 @@
   text-transform: uppercase;
 }
 
+.faq-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  transition: max-height 0.7s ease, opacity 0.7s ease;
+}
+
+.faq-content.active {
+  max-height: 500px; /* adapte selon le contenu moyen */
+  opacity: 1;
+  padding-bottom: 20px;
+}

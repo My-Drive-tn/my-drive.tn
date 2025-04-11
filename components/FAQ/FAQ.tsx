@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import './FAQ.css';
-import { div } from 'framer-motion/client';
 
 const faqData = [
   {
@@ -53,9 +52,7 @@ const faqData = [
       "Oui, My-Drive prend en charge les fichiers de grande taille. Vous pouvez télécharger des fichiers de plusieurs gigaoctets sans problème, et nous avons des outils pour accélérer le transfert de gros fichiers.",
     tag: "Performance & Capacité",
   },
-  
 ];
-
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -65,61 +62,43 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-wrapper" id='FAQ' >
+    <section className="faq-wrapper" id='FAQ'>
       <div className='spacer'>
-      <h1 className="FAQ-heading">Questions Fréquemment Posées</h1>
-      <h2 className="FAQ-subtitle">Tout ce que vous devez savoir sur My-Drive pour en tirer le meilleur parti</h2>
+        <h1 className="FAQ-heading">Questions Fréquemment Posées</h1>
+        <h2 className="FAQ-subtitle">Tout ce que vous devez savoir sur My-Drive pour en tirer le meilleur parti</h2>
 
-      {faqData.map((item, index) => (
-        <div className="faq-container" key={index}>
-          <button
-            className="faq-button"
-            onClick={() => toggleFAQ(index)}
-            aria-expanded={openIndex === index}
-          >
-            <span>{item.question}</span>
-            {openIndex === index ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="faq-icon"
-              >
-                <path d="M5 12h14" />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="faq-icon"
-              >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-            )}
-          </button>
+        {faqData.map((item, index) => (
+          <div className="faq-container" key={index}>
+            <button
+              className="faq-button"
+              onClick={() => toggleFAQ(index)}
+              aria-expanded={openIndex === index}
+            >
+              <span>{item.question}</span>
+              {openIndex === index ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                  strokeLinejoin="round" className="faq-icon">
+                  <path d="M5 12h14" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                  strokeLinejoin="round" className="faq-icon">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              )}
+            </button>
 
-          {openIndex === index && (
-            <div className="faq-content">
+            <div className={`faq-content ${openIndex === index ? 'active' : ''}`}>
               <p>{item.answer}</p>
               <div className="faq-tag-container">
                 <span className="faq-tag">{item.tag}</span>
               </div>
             </div>
-          )}
-        </div>
-      ))}
-    </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

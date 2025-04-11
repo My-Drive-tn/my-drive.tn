@@ -1,10 +1,11 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './Card.css';
 import { IFeature } from '@/common/typres';
 import SectionTitle from '@/components/SerctionTitle/SectionTitle';
 
 const Card: React.FC = () => {
-
   const features: IFeature[] = [
     {
       icon: "/folderbl.webp",
@@ -33,24 +34,95 @@ const Card: React.FC = () => {
     },
   ];
 
-  return (
-   
-    <section className="container" id="Fonctionnalités">
-      < div className="spacer"></div>
-      <SectionTitle section='FONCTIONALITE' />
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex + 1 >= features.length ? 0 : prevIndex + 1
+    );
+  };
 
-      <div className="card-grid">
-        {features.map((panel, index) => (
-          <div key={index} className="card">
-            <img src={panel.icon} alt={panel.title} className="card-icon" 
-              width={100}
-              height={100} />
-            <h3 className="cardTitle">{panel.title}</h3>
-            {panel.description && <p className="description">{panel.description}</p>}
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex - 1 < 0 ? features.length - 1 : prevIndex - 1
+    );
+  };
+
+  const getVisibleCards = () => {
+    const cards = [];
+    // On desktop, show 3 cards
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % features.length;
+      cards.push(features[index]);
+    }
+    return cards;
+  };
+
+  return (
+    <section className="carousel-container" id="Fonctionnalités">
+    < div className="spacer"></div>
+    <SectionTitle section='FONCTIONALITE' />
+      <button
+        onClick={prevSlide}
+        className="carousel-btn prev-btn"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>  
+
+      <div className="card-slider">
+        {/* Mobile: Show single card */}
+        <div className="mobile-card">
+          <div className="card">
+            <img 
+              src={features[currentIndex].icon} 
+              alt={features[currentIndex].title} 
+              className="card-icon" 
+              width={80}
+              height={80}
+            />
+            <h3 className="cardTitle">{features[currentIndex].title}</h3>
+            <p className="description">{features[currentIndex].description}</p>
           </div>
+        </div>
+
+        {/* Desktop: Show three cards */}
+        <div className="desktop-cards">
+          {getVisibleCards().map((feature, index) => (
+            <div key={index} className="card">
+              <img 
+                src={feature.icon} 
+                alt={feature.title} 
+                className="card-icon" 
+                width={80}
+                height={80}
+              />
+              <h3 className="cardTitle">{feature.title}</h3>
+              <p className="description">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button
+        onClick={nextSlide}
+        className="carousel-btn next-btn"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
+
+      {/* Dots indicator for mobile */}
+      <div className="dots-container">
+        {features.map((_, index) => (
+          <button
+            key={index}
+            className={`dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
         ))}
       </div>
-      <div/>
     </section>
     
   );

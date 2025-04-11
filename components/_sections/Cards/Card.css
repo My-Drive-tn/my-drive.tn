@@ -1,78 +1,173 @@
-.card-grid {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-areas:
-    "one two two"
-    "three two two"
-    "four four five";
-    text-align: center;
+/* Conteneur principal du carousel */
+.carousel-container {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Met les éléments sur une colonne (verticalement) */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Espacement vertical entre le titre et les cartes */
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
 }
 
-.card .card-icon{
-  margin-left: auto;
-  margin-right: auto;
+.carousel-section {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.card-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 4rem 0;
+  /*background-color: #f8f9fa;*/
+}
+
+.mobile-card {
+  display: none;
+}
+
+.desktop-cards {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+  width: 100%;
+  justify-content: center; /* Centrer les cartes horizontalement */
 }
 
 .card {
-  position: relative;
+  min-width: calc(38% - 2rem); /* Largeur des cartes (3 par ligne) */
+  background-color: white;
   padding: 2rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
   border-radius: 1rem;
-  color: white;
-  background-color: white; /* ou use bg-white via Tailwind */
-
-  /* Nouveau box-shadow */
+  text-align: center;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.4s ease;
+  transition: all 0.4s ease;
+  /*flex-shrink: 0;*/
+  display: flex;
+  flex-direction: column; /* Empile les éléments verticalement */
+  align-items: center;
+  justify-content: space-between;
+  /*transform: scale(1.1);*/
 }
 
-/* Hover effect */
 .card:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
-
-.card .cardTitle {
+.cardTitle {
   font-size: 1.5rem;
-  text-transform: capitalize;
   font-weight: bold;
-  color: var(--primary-text);
+  color: #333;
+  margin: 1rem 0;
 }
 
-.card .description {
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: var(--secondary-text);
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
 }
 
-/* ---- CARDS CSS ---- */
-.card:nth-child(1) {
-  grid-area: one;
+.card-icon {
+  margin-bottom: 1rem; /* Ajoute de l'espace entre l'icône et le titre */
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
-.card:nth-child(2) {
-  grid-area: two;
+/* Boutons du carousel */
+.carousel-btn {
+  background-color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  top: 68%;
 }
 
-.card:nth-child(3) {
-  grid-area: three;
+.carousel-btn:hover {
+  background-color: #f8f8f8;
+  transform: scale(1.1);
 }
 
-.card:nth-child(4) {
-  grid-area: four;
+.carousel-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
-.card:nth-child(5) {
-  grid-area: five;
+.prev-btn {
+  left: 8px
 }
 
+.next-btn {
+  right: 8px;
+}
 
+.dots-container {
+  display: none;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  right: 0;
+}
 
-/* Responsive adjustments */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* Styles pour mobile */
 @media (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: 1fr;
+  .desktop-cards {
+    display: none;
+  }
+
+  .mobile-card {
+    display: block;
+  }
+
+  .card {
+    min-width: 100%;
+    margin: 0 auto;
+  }
+
+  .dots-container {
+    display: flex;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    top: 73%;
+  }
+
+  .prev-btn {
+    left: 8px;
+  }
+
+  .next-btn {
+    right: 8px;
   }
 }

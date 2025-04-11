@@ -8,13 +8,17 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* permet le passage à la ligne en petit écran */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  gap: 2rem; /* espace entre les blocs */
 }
 
 .footer-container > div {
-  width: 30%;
+  flex: 1 1 200px; /* comportement flexible + largeur minimale */
+  min-width: 250px;
 }
 
 h4 {
@@ -24,14 +28,16 @@ h4 {
 
 ul {
   list-style: none;
-  padding: 2;
+  padding: 0;
+  margin: 0;
 }
 
 ul li {
   margin-bottom: 0.8rem;
 }
 
-.footer-container strong, a {
+.footer-container strong,
+a {
   color: #2dd4bf;
   text-decoration: none;
 }
@@ -40,66 +46,124 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Newsletter bloc */
+.newsletter {
+  max-width: 300px;
+}
+
 .newsletter input {
-  width: 100%; /* w-full */
-  padding: 0.5rem 1rem; /* px-4 py-2 */
-  border-radius: 0.75rem; /* rounded-lg */
-  background-color: #2d3748; /* bg-slate-800 */
-  border: 1px solid #4a5568; /* border-slate-700 */
-  color: white; /* Texte en blanc (si besoin) */
-  transition: border-color 0.3s, box-shadow 0.3s; /* Transition lors du focus */
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: white;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin-top: 0.5rem;
 }
 
 .newsletter input:focus {
-  outline: none; /* focus:outline-none */
-  box-shadow: 0 0 0 2px #14b8a6;  /* focus:ring-2 focus:ring-teal-500 */
-  border-color: transparent; /* focus:border-transparent */
+  outline: none;
+  box-shadow: 0 0 0 2px #14b8a6;
+  border-color: transparent;
 }
 
 .newsletter button {
-  width: 100%; /* w-full */
-  padding: 0.5rem 1rem; /* px-4 py-2 */
-  background-color: #14b8a6; /* bg-teal-500 */
-  color: white; /* text-white */
-  font-weight: 500; /* font-medium */
-  border-radius: 0.75rem; /* rounded-lg */
-  transition: all 0.2s ease; /* transition-all duration-200 */
-  transform: scale(1); /* Transform initial scale */
-  outline: none; /* Remove default outline */
-  border: none; /* Remove default border */
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #14b8a6;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  transform: scale(1);
+  outline: none;
+  border: none;
   margin-top: 10px;
 }
 
 .newsletter button:hover {
-  background-color: #0f9c8e; /* hover:bg-teal-600 */
-  transform: scale(1.02); /* Slight scale up on hover */
+  background-color: #0f9c8e;
+  transform: scale(1.02);
 }
 
 .newsletter button:active {
-  transform: scale(0.98); /* Slight scale down when clicked */
+  transform: scale(0.98);
 }
 
 .newsletter button:focus {
-  outline: none; /* focus:outline-none */
-  box-shadow: 0 0 0 2px #14b8a6, 0 0 0 4px #1e293b; /* Simulate the focus ring using box-shadow */
+  outline: none;
+  box-shadow: 0 0 0 2px #14b8a6, 0 0 0 4px #1e293b;
 }
 
+/* Message d'état */
+.newsletter-message {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.newsletter-message.success {
+  color: #14b8a6;
+}
+
+.newsletter-message.error {
+  color: #ef4444;
+}
+
+/* Bas de page */
 .footer-bottom {
-  margin-top: 3rem; /* mt-12 */
-  padding-top: 2rem; /* pt-8 */
-  border-top: 1px solid #2d3748; /* Change la couleur gris à un vert clair (#14b8a6) */
-  text-align: center; /* text-center */
-  font-size: 0.875rem; /* text-sm */
-  color: #cbd5e0; /* text-slate-400 */
-  width: 80%; /* Réduit la largeur de la ligne */
-  margin-left: auto; /* Centre la ligne horizontalement */
-  margin-right: auto; /* Centre la ligne horizontalement */
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #2d3748;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #cbd5e0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Correction du décalage sous le titre "Contactez-nous" */
+/* Correction du bloc contact */
 .contact-info p {
-  margin: 8px 4;  /* Réduit les marges et assure un espacement uniforme entre les paragraphes */
-  line-height: 1.5;    /* Augmente l'interligne pour une meilleure lisibilité */
-  margin-right: 80px;
+  margin: 8px 0;
+  line-height: 1.5;
   align-items: flex-start;
+}
+
+/* Pour les icônes devant les liens sociaux */
+.social-media a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espace entre l'icône et le texte */
+}
+
+.social-media a svg {
+  font-size: 1.2rem; /* Taille de l'icône */
+  color: #2dd4bf; /* Couleur de l'icône */
+  transition: color 0.3s;
+}
+
+.social-media a:hover svg {
+  color: #14b8a6; /* Couleur au survol */
+}
+
+.social-media a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .footer-container > div {
+    width: 100%;
+  }
+
+  .newsletter {
+    max-width: 100%;
+  }
 }
