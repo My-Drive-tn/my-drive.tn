@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My-drive",
+  title: "My-Drive",
   description: "You personal storage solution",
   icons: {
     icon: ['/favicon.ico'],

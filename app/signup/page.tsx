@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import '@/app/signup/signup.css';
 import Image from 'next/image';
+import './signup.css';
 
 export default function Signup() {
   return (

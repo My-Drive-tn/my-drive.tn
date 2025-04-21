@@ -32,7 +32,7 @@ export default function Navbar() {
           <Link href="/login">
             <button className="btn btn-login">Se connecter</button>
           </Link>
-          <Link href="#">
+          <Link href="/signup">
             <button className="btn btn-signup">S'inscrire</button>
           </Link>
         </div>

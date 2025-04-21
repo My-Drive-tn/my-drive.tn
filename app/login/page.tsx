@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import '@/app/login/login.css';
 import Image from 'next/image';
-
+import './login.css';
 
 export default function Login() {
   return (
@@ -32,7 +32,7 @@ export default function Login() {
             </form>
 
             <div className="form-link">
-              <span>Don't have an account? <Link href="#" className="link signup-link">Signup</Link></span>
+              <span>Don't have an account? <Link href="/signup" className="link signup-link">Signup</Link></span>
             </div>
           </div>
 
