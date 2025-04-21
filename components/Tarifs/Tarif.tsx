@@ -11,8 +11,8 @@ const PRICING: IPricing[] = [
     price: 'Gratuit',
     button: 'Commencer Gratuitement',
     features: [
-      '2 To d’espace de stockage pour vos fichiers essentiels',
-      '12 To de transfert pour un partage limité de données',
+      '5 Go d’espace de stockage pour vos fichiers essentiels',
+      '10 Go de transfert pour un partage limité de données',
       'Non partageable pour une gestion stricte des données',
       'Corbeille supprimée automatiquement après 7 jours, assurez-vous de récupérer vos fichiers avant cette date.',
     ],
@@ -24,8 +24,8 @@ const PRICING: IPricing[] = [
     button: 'Commencer avec Plus',
     popular: true,
     features: [
-      '8 To d’espace de stockage pour vos projets en expansion',
-      '24 To de transfert pour un partage efficace de vos données',
+      '2 To d’espace de stockage pour vos projets en expansion',
+      '50 Go de transfert pour un partage efficace de vos données',
       'Partageable avec votre équipe pour une collaboration facile',
       'Corbeille conservée pendant 30 jours, vous offrant plus de flexibilité pour récupérer vos fichiers.',
     ],
@@ -37,7 +37,7 @@ const PRICING: IPricing[] = [
     button: 'Commencer avec Pro',
     features: [
       'Espace de stockage illimité pour tous vos besoins d’archivage',
-      '96 To de transfert pour une gestion massive de données',
+      '250 Go de transfert pour une gestion massive de données',
       'Partageable avec votre équipe et partenaires en toute sécurité',
       'Corbeille à vie pour une récupération permanente de vos fichiers',
     ],
