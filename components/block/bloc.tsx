@@ -8,12 +8,12 @@ const Bloc: React.FC = () => {
       <div className="content">
         <div className="textBlock">
           <h2 className="title">
-            Développez des stratégies de trading complexes via les produits dérivés.
+          Protégez votre contenu avec notre sécurité.
           </h2>
-          <h3 className="subtitle">Produits dérivés</h3>
+          <h3 className="subtitle">Assurer la sécurité à tout moment</h3>
         </div>
         <div className="imageBlock">
-          <img src="/stockage.png" alt="Mockup trading" className="mockup" />
+          <img src="/capture.png" alt="capture" className="capture" />
         </div>
       </div>
     </section>
