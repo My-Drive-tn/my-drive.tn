@@ -10,12 +10,13 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-container">
-        {/* Logo */}
-        <Link href="#HeroSection" className="logo-section" id="navbar">
-          <Image src="/cloud-computing.png" width={45} height={45} alt='logo' />
-          <h2>My-Drive</h2>
-        </Link>
+    <div className="navbar-container">
+      {/* Logo */}
+      <div className="logo-section" id="navbar">
+        <Image src="/cloud-computing.png" width={45} height={45} alt="logo" />
+        <h2>My-Drive</h2>
+      </div>
+
 
 
 

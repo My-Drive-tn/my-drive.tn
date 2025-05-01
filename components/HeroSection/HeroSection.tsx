@@ -28,7 +28,9 @@ const HeroSection = () => {
         </p>
 
         <div className="fade-in-scale">
+        <a href="http://localhost:4200/auth/register">
           <button className="hero-button">Commencer maintenant</button>
+        </a>
         </div>
       </div>
     </section>
