@@ -28,14 +28,15 @@ export default function Navbar() {
         </div>
 
         {/* Auth Buttons */}
-        <div className={`auth-buttons ${isMenuOpen ? 'show' : ''}`}>
-          <Link href="/login">
-            <button className="btn btn-login">Se connecter</button>
-          </Link>
-          <Link href="/signup">
-            <button className="btn btn-signup">S'inscrire</button>
-          </Link>
-        </div>
+      <div className={`auth-buttons ${isMenuOpen ? 'show' : ''}`}>
+        <a href="http://localhost:4200/auth/login" target='_blank'>
+        <button className="btn btn-login">Se connecter</button>
+        </a>
+        <a href="http://localhost:4200/auth/register">
+        <button className="btn btn-signup">S'inscrire</button>
+        </a>
+      </div>
+
         {/* Burger Icon (visible mobile uniquement) */}
         <button
           className="burger-icon"
