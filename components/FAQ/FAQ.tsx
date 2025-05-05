@@ -23,9 +23,9 @@ const faqData = [
     tag: "Fonctionnalité & Utilisation",
   },
   {
-    question: "Est-ce que My-Drive est compatible avec tous les appareils ",
+    question: "Est-ce que My-Drive est compatible avec tous les appareils ?",
     answer:
-      "Oui, My-Drive est compatible avec tous les appareils qui supportent FTP/SFTP, y compris Windows, macOS, Linux, ainsi que les appareils mobiles via des applications dédiées. Vous pouvez également accéder à vos fichiers via un navigateur web en toute simplicité.",
+    "Oui, My-Drive est compatible avec tous les appareils qui supportent FTP/SFTP, y compris Windows, macOS et Linux. Grâce à son interface web entièrement responsive, vous pouvez également y accéder facilement depuis des appareils mobiles via un navigateur, sans nécessiter d'application dédiée.",
     tag: "Compatibilité & Accessibilité",
   },
   {
@@ -39,6 +39,12 @@ const faqData = [
     answer:
       "Oui, My-Drive vous permet de partager facilement des fichiers et des dossiers avec d'autres personnes. Vous pouvez définir des autorisations spécifiques pour chaque utilisateur, comme l'accès en lecture ou en écriture, pour garantir un contrôle total sur vos fichiers partagés.",
     tag: "Fonctionnalité & Partage",
+  },
+  {
+    question: "Qu'est-ce que le gestionnaire de mots de passe et de notes ?",
+    answer:
+      "Il s'agit d'une fonctionnalité intégrée à My-Drive qui vous permet de stocker en toute sécurité vos mots de passe, identifiants, et notes personnelles. Toutes les données sont chiffrées et accessibles uniquement par vous.",
+    tag: "Fonctionnalité & Sécurité",
   },
   {
     question: "Quelles sont les fonctionnalités supplémentaires de My-Drive ?",

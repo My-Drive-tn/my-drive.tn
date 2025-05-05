@@ -7,10 +7,12 @@ const Bloc: React.FC = () => {
 
       <div className="content">
         <div className="textBlock">
-          <h2 className="title">
-          Protégez votre contenu avec notre sécurité.
-          </h2>
-          <h3 className="subtitle">Assurer la sécurité à tout moment</h3>
+        <h2 className="title">
+          Découvrez l’interface intuitive et sécurisée de My-Drive
+        </h2>
+        <h3 className="subtitle">
+          Une expérience fluide pour gérer, organiser et protéger vos fichiers
+        </h3>
         </div>
         <div className="imageBlock">
           <img src="/capture.png" alt="capture" className="capture" />
