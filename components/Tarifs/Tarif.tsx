@@ -81,9 +81,11 @@ export default function Tarif() {
                 </li>
               ))}
             </ul>
+            <a href="http://localhost:4200/auth/register" target='_blank' rel="noopener noreferrer">
             <button className="cta-button">
               {plan.button}
             </button>
+            </a>
           </div>
         ))}
       </div>
