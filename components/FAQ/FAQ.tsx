@@ -37,7 +37,7 @@ const faqData = [
   {
     question: "Puis-je partager des fichiers avec d'autres personnes ?",
     answer:
-      "Oui, My-Drive vous permet de partager facilement des fichiers et des dossiers avec d'autres personnes. Vous pouvez définir des autorisations spécifiques pour chaque utilisateur, comme l'accès en lecture ou en écriture, pour garantir un contrôle total sur vos fichiers partagés.",
+    "Le partage de fichiers est disponible selon votre formule. Avec la version gratuite, le partage n’est pas autorisé. La version Plus permet de partager avec un nombre limité de personnes, tandis que la version Pro offre un partage illimité avec des autorisations personnalisées pour chaque utilisateur.",
     tag: "Fonctionnalité & Partage",
   },
   {
@@ -49,7 +49,7 @@ const faqData = [
   {
     question: "Quelles sont les fonctionnalités supplémentaires de My-Drive ?",
     answer:
-      "My-Drive offre plusieurs fonctionnalités supplémentaires telles que la gestion des utilisateurs et des permissions, le téléchargement en masse, des options de partage sécurisé par lien, ainsi qu’une interface de gestion des fichiers accessible depuis un navigateur web.",
+    "My-Drive propose des fonctionnalités avancées telles que la gestion des utilisateurs et des permissions, le téléchargement en masse, le partage sécurisé par lien, la transformation de médias (conversion, redimensionnement...) ainsi qu’une interface web intuitive pour gérer vos fichiers.",
     tag: "Fonctionnalité Avancée",
   },
   {

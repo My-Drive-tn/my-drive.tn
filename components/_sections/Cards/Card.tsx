@@ -32,6 +32,17 @@ const Card: React.FC = () => {
       title: "Partage avancé",
       description: "Partagez avec des permissions personnalisées."
     },
+    {
+    icon: "/notes2.webp",
+    title: "Gestion de notes",
+    description: "Créez et organisez vos notes personnelles directement depuis votre espace."
+    }, 
+    {
+    icon: "/password1.webp",
+    title: "Coffre-fort de mots de passe",
+    description: "Stockez vos mots de passe en toute sécurité, accessibles uniquement par vous."
+    }
+
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -37,7 +37,7 @@
 
 .popular-badge {
     position: absolute;
-    top: -12px;
+    top: -18px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #35c0de;

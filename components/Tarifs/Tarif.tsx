@@ -26,7 +26,7 @@ const PRICING: IPricing[] = [
     features: [
       '2 To d’espace de stockage pour vos projets en expansion',
       '50 Go de transfert pour un partage efficace de vos données',
-      'Partageable avec votre équipe pour une collaboration facile',
+      'Partage limité à quelques personnes pour une collaboration de base',
       'Corbeille conservée pendant 30 jours, vous offrant plus de flexibilité pour récupérer vos fichiers.',
     ],
   },
