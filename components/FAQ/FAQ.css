@@ -1,6 +1,7 @@
 /* Style général de la FAQ */
 .faq-wrapper {
   margin: 40px 0;
+  padding: 0 1rem;
 }
 
 .FAQ-heading {
@@ -95,4 +96,10 @@
   max-height: 500px; /* adapte selon le contenu moyen */
   opacity: 1;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .faq-wrapper{
+    padding: 0 1rem;
+  }
+  
 }

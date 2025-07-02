@@ -7,13 +7,13 @@ const faqData = [
   {
     question: "Qu'est-ce que My-Drive ?",
     answer:
-      "My-Drive est une plateforme de stockage en ligne sécurisée qui vous permet de stocker, partager et accéder à vos fichiers depuis n'importe où. Nous vous offrons une solution de stockage basée sur FTP/SFTP, afin que vous puissiez gérer vos fichiers facilement et en toute sécurité.",
+    "My-Drive est une plateforme de stockage en ligne sécurisée qui vous permet de stocker, partager et accéder à vos fichiers depuis n'importe où. Nous vous offrons une solution de stockage basée sur FTP/SFTP, afin que vous puissiez gérer vos fichiers facilement et en toute sécurité. En plus de ces fonctionnalités, My-Drive propose des outils de transformation de médias, vous permettant de redimensionner, convertir, recadrer, ou effectuer d'autres modifications directement depuis l'interface.",
     tag: "Fonctionnalité & Utilisation",
   },
   {
     question: " Est-ce que My-Drive est sécurisé ?",
     answer:
-      "Oui, la sécurité est notre priorité. Nous utilisons le protocole SFTP (SSH File Transfer Protocol) pour garantir la confidentialité et l'intégrité de vos données lors des transferts. De plus, toutes vos informations sont cryptées et stockées de manière sécurisée.",
+      "Oui, la sécurité est notre priorité. Nous utilisons le protocole SFTP pour garantir la confidentialité et l'intégrité de vos données lors des transferts. De plus, toutes vos informations sont cryptées et stockées de manière sécurisée.",
     tag: "Sécurité & Conformité",
   },
   {
@@ -55,7 +55,7 @@ const faqData = [
   {
     question: "Est-ce que My-Drive prend en charge les fichiers volumineux ?",
     answer:
-      "Oui, My-Drive prend en charge les fichiers de grande taille. Vous pouvez télécharger des fichiers de plusieurs gigaoctets sans problème, et nous avons des outils pour accélérer le transfert de gros fichiers.",
+    "Oui, My-Drive prend en charge les fichiers volumineux selon l’abonnement choisi. L’offre Basic permet un transfert de 10 Go, adapté aux fichiers essentiels. Pour les besoins plus importants, l’offre Plus permet jusqu’à 50 Go de transfert, tandis que l’offre Pro offre 250 Go de transfert et un espace de stockage illimité, idéal pour la gestion de gros fichiers à grande échelle.",
     tag: "Performance & Capacité",
   },
 ];

@@ -15,7 +15,7 @@ const Bloc: React.FC = () => {
         </h3>
         </div>
         <div className="imageBlock">
-          <img src="/capture.png" alt="capture" className="capture" />
+          <img src="/pageaccfinal.png" alt="capture" className="capture" />
         </div>
       </div>
     </section>

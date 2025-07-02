@@ -180,11 +180,14 @@
     width: 50%;
     background-color: #1e2746;
     padding: 1rem 0;
-    margin-top: 200px;
+  
   }
 
   .nav-links.show {
     display: flex;
+    position: absolute;
+    top: 60px;
+    right: 0;
   }
 
   .nav-links a {
